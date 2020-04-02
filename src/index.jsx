@@ -21,7 +21,11 @@ ReactDOM.render(
   <Provider store={createStore(reducers, {}, middlewares)}>
     <Router history={history}>
       <Switch>
-        TODO
+        <div className="thin-container">
+          <Switch>
+            <Route path="/" exact component={PostsIndex} />
+          </Switch>
+        </div>
       </Switch>
     </Router>
   </Provider>,

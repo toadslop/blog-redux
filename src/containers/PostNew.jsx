@@ -8,7 +8,7 @@ import { createPost } from '../actions';
 class PostNew extends Component {
   onSubmit = (values) => {
     this.props.createPost(values, (post) => {
-      this.props.history.push('/');
+      this.props.history.push('/'); // Navigate after submit
       return post;
     });
   }

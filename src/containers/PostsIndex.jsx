@@ -5,9 +5,9 @@ import { bindActionCreators } from 'redux';
 import { fetchPosts } from '../actions';
 
 class PostsIndex extends Component {
-  componentDidMount() {
-    this.props.fetchPosts();
-  }
+  // componentDidMount() {
+  //   this.props.fetchPosts();
+  // }
 
   renderPosts() {
     return this.props.posts.map((post) => {
@@ -27,7 +27,7 @@ class PostsIndex extends Component {
       <div>
         <div className="first-row">
           <h3>Blog</h3>
-          <Link className="bnt btn-primary btn-cta" to="/posts/new">
+          <Link className="btn btn-primary btn-cta" to="/posts/new">
             Let's write a post!
           </Link>
         </div>

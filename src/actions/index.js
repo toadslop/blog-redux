@@ -3,7 +3,7 @@ export const FETCH_POST = 'FETCH_POST';
 export const POST_CREATED = 'POST_CREATED';
 
 export function createPost(body, callback) {
-  const request = fetch('http://reduxblog.herokuapp.com/api/?key=bri-post', {
+  const request = fetch('http://reduxblog.herokuapp.com/api/posts?key=bri-post', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json/' },
     body: JSON.stringify(body)

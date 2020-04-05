@@ -97,3 +97,15 @@ form a {
     margin-bottom: 0;
   }
 }
+
+.show-buttons {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.show-button {
+  &:hover {
+    font-weight: bold;
+  }
+}

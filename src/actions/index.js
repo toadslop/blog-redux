@@ -21,7 +21,6 @@ export function createPost(body, callback) {
     body: JSON.stringify(body)
   }).then(response => response.json())
     .then(callback);
-  console.log(request);
   return {
     type: POST_CREATED,
     payload: request
@@ -29,9 +28,9 @@ export function createPost(body, callback) {
 }
 
 export function fetchPost(id) {
-  const promise = fetch(`http://reduxblog.herokuapp.com/api/${id}?key=bri-post`)
+  const promise = fetch(`http://reduxblog.herokuapp.com/api/posts/${id}?key=bri-post`)
     .then(response => response.json());
-
+  console.log("promise", promise);
   return {
     type: FETCH_POST,
     payload: promise

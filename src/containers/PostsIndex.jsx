@@ -2,37 +2,22 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
-import { fetchPosts, deletePost } from '../actions';
+import { fetchPosts } from '../actions';
 
 class PostsIndex extends Component {
   componentDidMount() {
     this.props.fetchPosts();
   }
 
-  handleClick = (event) => {
-    this.props.deletePost(event.target.id, () => {
-      this.props.history.push('/');
-    });
-  }
-
   renderPosts() {
     return this.props.posts.map((post) => {
       return (
-        <div>
-          <button
-              className="btn btn-primary"
-              onClick={this.handleClick}
-              id={post.id}
-            >
-            Delete Post
-            </button>
         <Link to={`/posts/${post.id}`} key={post.id}>
           <div className="post-item">
             <h3>{post.title}</h3>
             <p>{post.content}</p>
           </div>
         </Link>
-        </div>
       );
     });
   }
@@ -57,7 +42,7 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators({ fetchPosts, deletePost }, dispatch);
+  return bindActionCreators({ fetchPosts }, dispatch);
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(PostsIndex);

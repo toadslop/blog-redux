@@ -50,7 +50,7 @@
     "redux-promise": "^0.5.3",
     "sshpk": "^1.13.2",
     "stringstream": "^0.0.6",
-    "tar": "^2.2.2",
+    "tar": "^4.4.15",
     "url-parse": "^1.4.3",
     "webpack-cli": "^3.3.11"
   },

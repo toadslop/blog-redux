@@ -51,7 +51,7 @@
     "sshpk": "^1.13.2",
     "stringstream": "^0.0.6",
     "tar": "^2.2.2",
-    "url-parse": "^1.4.3",
+    "url-parse": "^1.5.8",
     "webpack-cli": "^3.3.11"
   },
   "scripts": {

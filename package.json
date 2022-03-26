@@ -37,7 +37,7 @@
     "macaddress": "^0.2.9",
     "mem": "^4.0.0",
     "mime": "^1.4.1",
-    "minimist": "^1.2.2",
+    "minimist": "^1.2.6",
     "querystringify": "^2.0.0",
     "randomatic": "^3.0.0",
     "react": "^16.13.1",
